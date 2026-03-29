@@ -1,2 +1,4 @@
 System Requirements:
-The system requires Python programming language with libraries such as Pandas, NumPy, Scikit-learn, and Matplotlib. The project can be executed on a system with minimum 4GB RAM and Intel i3 processor. The development environment used for this project is Jupyter Notebook / Visual Studio Code.
+The system requires Python programming language with libraries such as Pandas, NumPy, Scikit-learn, and Matplotlib. 
+The project can be executed on a system with minimum 4GB RAM and Intel i3 processor.
+The development environment used for this project is Jupyter Notebook / Visual Studio Code.
