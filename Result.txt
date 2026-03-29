@@ -1,0 +1,48 @@
+Results of Sentiment Analysis Project
+1. Model Output
+
+After training the model using TF-IDF Vectorization and Logistic Regression, the model was tested on the test dataset.
+
+Actual vs Predicted Output
+Text Sample	Actual Sentiment	Predicted Sentiment
+Horrible experience	Negative	Positive
+Worst purchase ever	Negative	Positive
+
+Because the dataset is very small, the model predictions are not very accurate.
+
+2. Classification Report (Result)
+
+You can write this in your report:
+
+Precision    Recall    F1-Score    Support
+
+Negative      0.00      0.00       0.00       2
+Positive      0.00      0.00       0.00       0
+
+Accuracy                           0.00
+Macro Avg      0.00      0.00       0.00
+Weighted Avg   0.00      0.00       0.00
+Explanation
+Precision → Correct positive predictions
+Recall → Correct actual positives found
+F1-score → Balance between precision and recall
+Accuracy → Overall correctness of model
+
+Since the dataset is very small, the accuracy is low. With a larger dataset, the model performance would improve significantly.
+
+3. Confusion Matrix
+
+Confusion Matrix Result:
+
+[[0 2]
+ [0 0]]
+Confusion Matrix Explanation
+	Predicted Negative	Predicted Positive
+Actual Negative	0	2
+Actual Positive	0	0
+
+This means:
+
+0 correctly predicted negatives
+2 negatives predicted as positive
+No positive samples in test data
