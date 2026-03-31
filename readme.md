@@ -1,48 +1,105 @@
-Sentiment Classification using Supervised Learning
+🧠 Sentiment Analysis in Prolog (SWISH Compatible)
 
- Project Overview
-This project builds a machine learning model to classify text reviews or social media posts into three sentiment categories: positive, negative, and neutral. The model uses supervised learning techniques, specifically logistic regression with TF-IDF features, to perform sentiment analysis on raw text data.
+This project implements a Sentiment Analysis system using Prolog, designed to mirror a typical machine learning pipeline (like Python’s sklearn) using logical rules and symbolic processing.
 
-Features
-- Text preprocessing with TF-IDF vectorization
-- Sentiment classification into three classes
-- Model training, evaluation with classification report and confusion matrix
-- Predict sentiment of new text inputs through the classifier
+It classifies text into three categories:
 
-Dataset
-The sample dataset contains labeled text reviews with corresponding sentiments. You can replace it with larger real-world datasets like IMDb reviews, Amazon product reviews, or Twitter datasets.
+✅ Positive
+❌ Negative
+⚪ Neutral
+🚀 Features
+🔹 Custom dataset of labeled sentences
+🔹 Train/Test split (80/20)
+🔹 Keyword-based scoring (TF-IDF inspired)
+🔹 Rule-based classification (logistic-style decision)
+🔹 Evaluation metrics:
+Precision
+Recall
+F1-score
+🔹 Confusion Matrix
+🔹 Predict sentiment of new sentences
+📂 Project Structure
+sentiment-prolog/
+│── sentiment.pl     % Main Prolog code
+│── README.md        % Project documentation
+⚙️ Requirements
 
+You can run this project using:
 
+🧩 SWI-Prolog (recommended)
+🌐 SWISH (Online Prolog IDE)
+▶️ How to Run
+🔹 Option 1: Run in SWI-Prolog (Local)
+Install SWI-Prolog: https://www.swi-prolog.org/
+Open terminal and navigate to project folder
+Run:
+swipl
+Load the file:
+?- [sentiment].
+Execute the program:
+?- run.
+🔹 Option 2: Run in SWISH (Online)
+Open: https://swish.swi-prolog.org/
+Copy and paste the code into the editor
+Click Run
+Execute:
+?- run.
+📊 Sample Output
+✔ Predictions
+ID   True        Predicted
+1    positive    positive  OK
+2    negative    negative  OK
+...
+📈 Classification Report
+Class       Precision   Recall   F1-Score
+positive    1.0000      1.0000   1.0000
+negative    1.0000      1.0000   1.0000
+neutral     1.0000      1.0000   1.0000
+🔢 Confusion Matrix
+              Predicted
+            pos   neg   neu
+Actual pos   4     0     0
+Actual neg   0     3     0
+Actual neu   0     0     3
+🧪 Test Your Own Sentence
 
-Installation
-- Python 3.x
-- pandas
-- scikit-learn
+Use the predict/2 predicate:
 
-Install dependencies using:
+?- predict("This is absolutely amazing!", Label).
+Example Output:
+Sentence : This is absolutely amazing!
+Sentiment: positive
+🧠 How It Works
+1. Tokenization
+Converts sentence into lowercase words
+2. Keyword Matching
+Matches words with predefined sentiment lexicon
+3. Scoring
+Assigns weights (1–3) to words (similar to TF-IDF importance)
+4. Classification Logic
+Chooses sentiment with highest score
+📌 Example Rules
+keyword(amazing, positive, 3).
+keyword(worst, negative, 3).
+keyword(okay, neutral, 2).
+📉 Evaluation Metrics
+Precision = Correct positive predictions / Total predicted positives
+Recall = Correct positive predictions / Actual positives
+F1 Score = Harmonic mean of precision & recall
+🎯 Learning Outcomes
 
- Usage
+This project helps understand:
 
-1. Load and preprocess the dataset.
-2. Train the logistic regression model using the training data.
-3. Evaluate the model on the test set.
-4. Predict sentiment for new text samples.
+Logic Programming with Prolog
+Rule-based NLP systems
+How ML concepts can be simulated without ML libraries
+Evaluation metrics used in classification
+🔮 Future Improvements
+Add larger dataset
+Implement real TF-IDF calculation
+Use NLP preprocessing (stopwords, stemming)
+Integrate with Python (hybrid system)
+👤 Author
 
-
-Code Overview
-
-The main code performs the following steps:
-- Data loading and splitting
-- TF-IDF feature extraction
-- Model training with Logistic Regression
-- Model evaluation and results display
-- Sentiment prediction on new input texts
-
-
-
-Future Improvements
-- Use larger and diverse datasets for better generalization
-- Experiment with more advanced models (SVM, LSTM, BERT)
-- Add text preprocessing like stemming, lemmatization, and stopword removal
-- Incorporate model interpretability tools
-- Deploy as a simple web app or API for real-time usage
+Aryan Patil
+B.Tech CSE Student
