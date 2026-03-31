@@ -5,19 +5,33 @@ This project implements a Sentiment Analysis system using Prolog, designed to mi
 It classifies text into three categories:
 
 ✅ Positive
+
 ❌ Negative
+
 ⚪ Neutral
+
+
 🚀 Features
 🔹 Custom dataset of labeled sentences
+
 🔹 Train/Test split (80/20)
+
 🔹 Keyword-based scoring (TF-IDF inspired)
+
 🔹 Rule-based classification (logistic-style decision)
+
 🔹 Evaluation metrics:
+
+
 Precision
 Recall
 F1-score
+
 🔹 Confusion Matrix
+
 🔹 Predict sentiment of new sentences
+
+
 📂 Project Structure
 sentiment-prolog/
 │── sentiment.pl     % Main Prolog code
@@ -27,7 +41,9 @@ sentiment-prolog/
 You can run this project using:
 
 🧩 SWI-Prolog (recommended)
+
 🌐 SWISH (Online Prolog IDE)
+
 ▶️ How to Run
 🔹 Option 1: Run in SWI-Prolog (Local)
 Install SWI-Prolog: https://www.swi-prolog.org/
@@ -38,17 +54,23 @@ Load the file:
 ?- [sentiment].
 Execute the program:
 ?- run.
+
+
 🔹 Option 2: Run in SWISH (Online)
 Open: https://swish.swi-prolog.org/
 Copy and paste the code into the editor
 Click Run
 Execute:
 ?- run.
+
+
 📊 Sample Output
 ✔ Predictions
 ID   True        Predicted
 1    positive    positive  OK
 2    negative    negative  OK
+
+
 ...
 📈 Classification Report
 Class       Precision   Recall   F1-Score
@@ -62,6 +84,7 @@ Actual pos   4     0     0
 Actual neg   0     3     0
 Actual neu   0     0     3
 🧪 Test Your Own Sentence
+
 
 Use the predict/2 predicate:
 
